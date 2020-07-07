@@ -37,7 +37,7 @@ ImgPreprocessing 노드는 yolov3_pytorch_ros 패키지에서 publish한 Image �
 아래의 node graph는 FLIR Camera를 이용하여 yolo를 실행하고 있는 상황을 보여준다. 이때, FLIR Camera에서 영상을 받아오는 과정에서 ROS2를 사용하기 때문에, topic_bridge를 이용하였다.
 
 
-<p align="center"><img src="https://user-images.githubusercontent.com/59161083/86770545-c8cbad80-c08b-11ea-86b6-f01d63071880.png" width="100%" height="100%"></img></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/59161083/86782946-ab521000-c09a-11ea-9321-d58a8a68a1d8.png" width="100%" height="100%"></img></p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/59161083/86770545-c8cbad80-c08b-11ea-86b6-f01d63071880.png" width="100%" height="100%"></img></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/59161083/86782991-bb69ef80-c09a-11ea-8af8-1deaba19b844.png" width="100%" height="100%"></img></p>
 
