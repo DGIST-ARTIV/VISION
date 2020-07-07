@@ -35,13 +35,13 @@ cap = EasyPySpin.VideoCapture(0)
 cap.cam.PixelFormat.SetValue(PySpin.PixelFormat_BayerGB8)
 ```
 
-이때, pixel format을 정해주어야하는데 우리는 SpinView에서 확인한 pixel format으로 설정해주었다.
+이때, pixel format을 정해주어야하는데 우리는 SpinView에서 확인한 pixel format으로 설정해주었다.   
 
 ```(python3)
 cap.cam.PixelFormat.SetValue(PySpin.PixelFormat_BayerGB8)
 ```
 
-이제 아래와 같이 기존의 opencv와 비슷한 방식으로 사용할 수 있다
+이제 아래와 같이 기존의 opencv와 비슷한 방식으로 사용할 수 있다.   
 
 ```(python3
 ret, frame = cap.read()
@@ -49,8 +49,25 @@ ret, frame = cap.read()
     img_show = cv2.cvtColor(img_show, cv2.COLOR_BayerGB2RGB)
 ```
 
-왜인지 모르겠지만, BGR이 아니라, RGB로 바꿔주어야 이미지가 똑바로 출력된다.
+왜인지 모르겠지만, BGR이 아니라, RGB로 바꿔주어야 이미지가 똑바로 출력된다.   
+
+전체 코드는 [여기]()   
 
 ### ROS2
+cv2 format의 이미지를 ROS2의 Image형식으로 바꿔주기 위해 CvBridge를 사용해야 한다. 이를 사용하기 위해, cv_bridge 라이브러리를 설치하자.   
+ros2를 사용해야 하니 위의 코드에서 rclpy를 import하자.   
 
+이후, 계속해서 실행될 img_callback 함수를 만들어 주었다.   
+
+```(python3)
+ret, img = self.cap.read()
+img = cv2.cvtColor(img, cv2.COLOR_BayerGB2RGB)
+img = cv2.resize(img, dsize = (args.width, args.height))
+temp=CvBridge().cv2_to_imgmsg(img, encoding = 'bgr8')
+self.publisher_.publish(temp)
+```
+
+위의 과정을 통해 cv2 형식의 이미지를 ROS2의 image message type의 형식으로 만들어준 후, publish 하게 된다.   
+
+전체 코드는 [여기]() 
 
