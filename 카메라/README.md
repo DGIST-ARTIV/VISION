@@ -5,6 +5,20 @@ date: 2020.07.07
 ## 구성품 및 동작 확인
 
 카메라와 박스 하나. 150만원짜리 카메라가 맞나 싶다. 덕분에 카메라가 정상적으로 작동된다는 것을 확인하는데에만 이틀이 걸렸다.   
+
+카메라는 아래와 같이 생겼다. 작고 귀엽다.   
+
+![FLIR 카메라 사진](https://user-images.githubusercontent.com/59161083/86768884-332f1e80-c089-11ea-9b86-b5bcc539f237.jpg)
+
+뒤에는 두개의 포트가 있는데, 윗쪽의 포트는 Micro-B 타입으로 컴퓨터와 연결하면 되고, 아래의 포트는 GPIO로 보조전원용이다.   
+
+![카메라 뒷면](https://user-images.githubusercontent.com/59161083/86769034-71c4d900-c089-11ea-8617-20ff9ad1c115.jpg)
+
+카메라 앞을 덮고 있는 덮개를 벗긴 후, 따로 구입한 c-mount 렌즈를 돌려서 끼워넣으면 된다.   
+
+![카메라 렌즈](https://user-images.githubusercontent.com/59161083/86769198-bea8af80-c089-11ea-9039-698f4e038d30.jpg)
+
+
 박스의 윗면을 보면, 아래와 같은 문구가 적혀있다.   
 
 **Before plugging in your camera**    
@@ -70,4 +84,7 @@ self.publisher_.publish(temp)
 위의 과정을 통해 cv2 형식의 이미지를 ROS2의 image message type의 형식으로 만들어준 후, publish 하게 된다.   
 
 전체 코드는 [여기]() 
+
+위의 코드를 그대로 실행하게 되면, FLIR_ImgPublisher라는 노드에서 FLIR_IMAGE 라는 topic을 publish하게 된다.
+
 
