@@ -41,3 +41,8 @@ cap.cam.PixelFormat.SetValue(PySpin.PixelFormat_BayerGB8)
 cap.cam.PixelFormat.SetValue(PySpin.PixelFormat_BayerGB8)
 ```
 
+이제 아래와 같이 기존의 opencv와 비슷한 방식으로 사용할 수 있다
+
+ret, frame = cap.read()
+        img_show = cv2.resize(frame, None, fx=args.scale, fy=args.scale)
+        img_show = cv2.cvtColor(img_show, cv2.COLOR_BayerGB2RGB)
