@@ -64,7 +64,7 @@ img_show = cv2.cvtColor(img_show, cv2.COLOR_BayerGB2RGB)
 
 왜인지 모르겠지만, BGR이 아니라, RGB로 바꿔주어야 이미지가 똑바로 출력된다.   
 
-전체 코드는 [여기](https://github.com/DGIST-ARTIV/VISION/blob/master/%EC%B9%B4%EB%A9%94%EB%9D%BC/FLIR_CAMERA(revised).py)   
+전체 코드는 [여기](https://github.com/DGIST-ARTIV/VISION/blob/master/%EC%B9%B4%EB%A9%94%EB%9D%BC/get_image_from_flir_camera.py)   
 
 ### ROS2
 cv2 format의 이미지를 ROS2의 Image형식으로 바꿔주기 위해 CvBridge를 사용해야 한다. 이를 사용하기 위해, cv_bridge 라이브러리를 설치하자.   
