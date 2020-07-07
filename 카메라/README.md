@@ -18,8 +18,8 @@ https://www.flirkorea.com/support-center/iis/machine-vision/downloads/spinnaker-
 
 설치 후, Spin view를 실행하면 카메라가 동작하는 것을 확인할 수 있다.
 
-## 사용법(python, ROS2)
-
+## 사용법(python3, ROS2)
+### python3
 python으로 FLIR 카메라에서 이미지를 받아온 후, 화면에 출력해보자.   
 FLIR 카메라는 기존에 쓰던 웹캠과는 달리, usb를 연결하자마자 카메라로 인식되지는 않는다.   
 즉, cv2.videocapture() 같은 함수를 사용해도 이미지를 받아올 수 없다.   
@@ -43,6 +43,14 @@ cap.cam.PixelFormat.SetValue(PySpin.PixelFormat_BayerGB8)
 
 이제 아래와 같이 기존의 opencv와 비슷한 방식으로 사용할 수 있다
 
+```(python3
 ret, frame = cap.read()
-        img_show = cv2.resize(frame, None, fx=args.scale, fy=args.scale)
-        img_show = cv2.cvtColor(img_show, cv2.COLOR_BayerGB2RGB)
+    img_show = cv2.resize(frame, None, fx=args.scale, fy=args.scale)
+    img_show = cv2.cvtColor(img_show, cv2.COLOR_BayerGB2RGB)
+```
+
+왜인지 모르겠지만, BGR이 아니라, RGB로 바꿔주어야 이미지가 똑바로 출력된다.
+
+### ROS2
+
+
