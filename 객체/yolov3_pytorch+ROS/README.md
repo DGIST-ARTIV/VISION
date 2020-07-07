@@ -36,5 +36,5 @@ ImgPreprocessing 노드는 yolov3_pytorch_ros 패키지에서 publish한 Image �
 ### node graph
 아래의 node graph는 usb_cam를 이용하여 yolo를 실행하고 있는 상황을 보여준다. 
 
-<p align="center"><img src="https://user-images.githubusercontent.com/59161083/86786495-0be34c00-c09f-11ea-893d-1a5e56e22069.png" width="100%" height="100%"></img></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/59161083/86787084-b0658e00-c09f-11ea-9872-0b4174d05446.png" width="100%" height="100%"></img></p>
 
