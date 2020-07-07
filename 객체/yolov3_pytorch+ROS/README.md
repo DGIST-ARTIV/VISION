@@ -1,4 +1,4 @@
-# How to use yolov3 with ROS + FLIR Camera(Grasshopper USB3)
+# How to use yolov3 with ROS
 Author: 이  구
 date: 2020.07.07
 
@@ -33,6 +33,11 @@ BboxSubscriber 노드는 yolov3_pytorch_ros 패키지에서 publish한 BoundingB
 
 ImgPreprocessing 노드는 yolov3_pytorch_ros 패키지에서 publish한 Image 메세지와 BoundingBoxes 메세지를 이용하여 시각화하는 역할을 한다. opencv를 이용하여 물체가 인식된 영역에 해당 class에 해당하는 색으로 사각형을 그린 후, 해당 객체의 class와 현재 위치(left, center, right)를 텍스트로 표시하게 된다.
 
+### node graph
+아래의 node graph는 FLIR Camera를 이용하여 yolo를 실행하고 있는 상황을 보여준다. 이때, FLIR Camera에서 영상을 받아오는 과정에서 ROS2를 사용하기 때문에, topic_bridge를 이용하였다.
+
+
+<p align="center"><img src="https://user-images.githubusercontent.com/59161083/86770545-c8cbad80-c08b-11ea-86b6-f01d63071880.png" width="100%" height="100%"></img></p>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/59161083/86770545-c8cbad80-c08b-11ea-86b6-f01d63071880.png" width="100%" height="100%"></img></p>
 
