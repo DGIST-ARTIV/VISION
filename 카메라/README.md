@@ -45,8 +45,8 @@ cap.cam.PixelFormat.SetValue(PySpin.PixelFormat_BayerGB8)
 
 ```(python3
 ret, frame = cap.read()
-    img_show = cv2.resize(frame, None, fx=args.scale, fy=args.scale)
-    img_show = cv2.cvtColor(img_show, cv2.COLOR_BayerGB2RGB)
+img_show = cv2.resize(frame, None, fx=args.scale, fy=args.scale)
+img_show = cv2.cvtColor(img_show, cv2.COLOR_BayerGB2RGB)
 ```
 
 왜인지 모르겠지만, BGR이 아니라, RGB로 바꿔주어야 이미지가 똑바로 출력된다.   
