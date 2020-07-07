@@ -46,11 +46,11 @@ edit the path code in dataset/voc_aug.py.
 
 ## Today's outcome
 ### lane detection
-<center><img src="img/lanedetection.png" width="900"></center>
+![lanedetection](https://user-images.githubusercontent.com/53460541/86725331-83e05080-c064-11ea-93a4-07f2dea2bbe7.png)
 --> I think this model detects lanes well even though test image is the night picture!!!
 
 ### But we have to solve fps problem....
-<center><img src="img/time-evaluation.png" width="900"></center>
+![time-evaluation](https://user-images.githubusercontent.com/53460541/86725341-85aa1400-c064-11ea-8a66-473d30ae7acf.png)
 --> It has only 10fps.... <br/>
 According to the paper, performance is 111fps by using this model. I hope our performance reach the 111fps!
 
