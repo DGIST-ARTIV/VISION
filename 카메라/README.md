@@ -20,9 +20,9 @@ date: 2020.07.07
 
 박스의 윗면을 보면, 아래와 같은 문구가 적혀있다.   
 
-**Before plugging in your camera**    
-Download the Getting Started Manual and Software.   
-Go to www.flir.com/mv-getting-started   
+    **Before plugging in your camera**    
+    Download the Getting Started Manual and Software.   
+    Go to www.flir.com/mv-getting-started   
 
 위의 링크를 타고 들어가면 간단한 사용 설명서를 볼 수 있다. 정말 간단하다.   
 
@@ -86,4 +86,5 @@ self.publisher_.publish(temp)
 
 위의 코드를 그대로 실행하게 되면, FLIR_ImgPublisher라는 노드에서 FLIR_IMAGE 라는 topic을 publish하게 된다.
 
+<p align="center"><img src="https://user-images.githubusercontent.com/59161083/86770545-c8cbad80-c08b-11ea-86b6-f01d63071880.png" width="50%" height="50%"></img></p>
 
