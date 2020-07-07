@@ -18,5 +18,6 @@ github에서 문서들을 다운받고 가지고 있는 dataset으로 학습을 
 | PolyLaneNet | 약 8~9 fps | 약 8624 MB | 227W/250W | 95~100% |
 | lanenet | 약 10 fps | 약 7511 MB | 100W/250W | 20% |
 | ENet-SAD | 약 4~50 fps | 약 1200 MB | 64W/250W | 33% |
+
 --> 지금까지 돌려본 network들 중 fps가 가장 좋았고 GPU 사용량도 그렇게 크지 않았다. 우리의 목표치와 가장 가까워 baseline으로 선정!  
 training을 위한 차선 dataset을 만들기 위한 annotation tool을 만들고, 후처리 진행
