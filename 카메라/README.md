@@ -12,7 +12,7 @@ date: 2020.07.07
 
 뒤에는 두개의 포트가 있는데, 윗쪽의 포트는 Micro-B 타입으로 컴퓨터와 연결하면 되고, 아래의 포트는 GPIO로 보조전원용이다.   
 
-<p align="center">img src="https://user-images.githubusercontent.com/59161083/86769034-71c4d900-c089-11ea-8617-20ff9ad1c115.jpg" width="50%" height="50%"></img></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/59161083/86769034-71c4d900-c089-11ea-8617-20ff9ad1c115.jpg" width="50%" height="50%"></img></p>
 
 카메라 앞을 덮고 있는 덮개를 벗긴 후, 따로 구입한 c-mount 렌즈를 돌려서 끼워넣으면 된다.   
 
