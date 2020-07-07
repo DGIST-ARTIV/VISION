@@ -86,5 +86,5 @@ self.publisher_.publish(temp)
 
 위의 코드를 그대로 실행하게 되면, FLIR_ImgPublisher라는 노드에서 FLIR_IMAGE 라는 topic을 publish하게 된다.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/59161083/86770545-c8cbad80-c08b-11ea-86b6-f01d63071880.png" width="50%" height="50%"></img></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/59161083/86770545-c8cbad80-c08b-11ea-86b6-f01d63071880.png" width="100%" height="100%"></img></p>
 
