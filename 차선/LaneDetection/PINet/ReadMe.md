@@ -1,4 +1,5 @@
-# Key Points Estimation and Point Instance Segmentation Approach for Lane Detection
+# Develog
+## Key Points Estimation and Point Instance Segmentation Approach for Lane Detection
 [github](https://github.com/koyeongmin/PINet) <br/>
 [sota paper](https://arxiv.org/pdf/2002.06604.pdf)
 
@@ -18,11 +19,11 @@ from parameters.py line 18, 19 ---> change the word to number 64, 32
 
 ## Today's outcome
 ### lane detection
-mode 0: test the code
-<center><img src="img/mode0.png" width="900"></center>
+mode 0: test the code  
+![mode0](https://user-images.githubusercontent.com/53460541/86725704-d883cb80-c064-11ea-9dda-4c4736b7f85e.png)  
 --> I think this model detects lanes well in Tusimple dataset.
-mode 1: run our video
-<center><img src="img/mode1.png" width="900"></center>
+mode 1: run our video  
+![mode1](https://user-images.githubusercontent.com/53460541/86725709-d9b4f880-c064-11ea-884d-5a407210005f.png)
 
 #### But we have to solve some problem....
 --> 직접 찍은 영상을 돌려본 결과인데, 끝쪽의 lane과 연석을 인식하는데 어려움이 있고 fps가 그렇게 높지 않다.(그 이유는 ~~GPU를 줘도 사용을 못하고 있는 상황이라서 이겠지...~~) fps는 최소 6fps~
