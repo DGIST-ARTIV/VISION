@@ -42,7 +42,7 @@ def shape_selection(event, x, y, flags, param):
 		cropping = False
 
 		# draw a rectangle around the region of interest
-		cv2.circle(image,(x,y),5, colorlist[len(points)] ,-1)
+		cv2.circle(image,(x,y),3, colorlist[len(points)] ,-1)
 		cv2.imshow("image", image)
 
 def load_video(cap):
