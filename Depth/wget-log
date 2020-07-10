@@ -1,0 +1,18 @@
+--2020-07-10 18:56:15--  https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_calib.zip
+Resolving s3.eu-central-1.amazonaws.com (s3.eu-central-1.amazonaws.com)... 52.219.47.51
+Connecting to s3.eu-central-1.amazonaws.com (s3.eu-central-1.amazonaws.com)|52.219.47.51|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4068 (4.0K) [application/zip]
+Saving to: ‘kitti_data/2011_09_26_calib.zip.1’
+
+
+
+2020-07-10 18:56:16 (1.06 MB/s) - ‘kitti_data/2011_09_26_calib.zip.1’ saved [4068/4068]
+
+--2020-07-10 18:56:16--  https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0001/2011_09_26_drive_0001_sync.zip
+Reusing existing connection to s3.eu-central-1.amazonaws.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 458643963 (437M) [application/zip]
+Saving to: ‘kitti_data/2011_09_26_drive_0001_sync.zip.1’
+
+_09_26_drive_0001_s  81%[===============>    ] 356.92M  1.86MB/s    eta 76s    09_26_drive_0001_sy  81%[===============>    ] 357.25M  1.73MB/s    eta 76s    9_26_drive_0001_syn  81%[===============>    ] 358.28M  1.91MB/s    eta 74s    
