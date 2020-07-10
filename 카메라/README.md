@@ -1,5 +1,5 @@
 # How to use FLIR Camera(Grasshopper USB3)
-Author: 이  구
+Author: 이  구   
 date: 2020.07.07
 
 ## 구성품 및 동작 확인
@@ -88,3 +88,6 @@ self.publisher_.publish(temp)
 
 <p align="center"><img src="https://user-images.githubusercontent.com/59161083/86770545-c8cbad80-c08b-11ea-86b6-f01d63071880.png" width="100%" height="100%"></img></p>
 
+
+### Note
+* FLIR_CAMERA(revised): 카메라가 컴퓨터와 정상적으로 연결되어 있지 않으면, FATAL 발생
