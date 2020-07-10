@@ -90,4 +90,4 @@ self.publisher_.publish(temp)
 
 
 ### Note
-* FLIR_CAMERA(revised): 카메라가 컴퓨터와 정상적으로 연결되어 있지 않으면, FATAL 발생
+* FLIR_CAMERA(revised): 카메라가 컴퓨터와 정상적으로 연결되어 있지 않으면, FATAL log가 발생
