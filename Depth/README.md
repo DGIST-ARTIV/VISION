@@ -17,8 +17,8 @@ GPU: RTX 2080Ti
 ```(python)
 python3 depth_video.py --model_name mono+stereo_640x192 --width 1080 --height 720 
 ```
---model_name 뒤의 값을 바꾸어 주면 다른 모델을 사용할 수 있다. 모델의 종류 및 차이점은 [여기](https://github.com/nianticlabs/monodepth2)서 확인
---width, --height 뒤의 값을 바꿔주면 해당 사이즈로 resize 된다.
+* --model_name 뒤의 값을 바꾸어 주면 다른 모델을 사용할 수 있다. 모델의 종류 및 차이점은 [여기](https://github.com/nianticlabs/monodepth2)서 확인
+* --width, --height 뒤의 값을 바꿔주면 해당 사이즈로 resize 된다.
 
 
 
