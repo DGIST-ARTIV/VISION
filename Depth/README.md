@@ -24,7 +24,7 @@ python3 depth_video.py --model_name [mono+stereo_640x192] --width [width] --heig
 
 #### ROS
 ```(python)
-python ROS_monodepth.py --model_name mono+stereo_640x192 --width 640 --height 480 
+python ROS_monodepth.py --model_name [mono+stereo_640x192] --width [width] --height [height] 
 ```
 
 
