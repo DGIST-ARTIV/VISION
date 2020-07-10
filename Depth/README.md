@@ -38,5 +38,5 @@ python3 depth_video.py --model_name mono+stereo_640x192 --width 1080 --height 72
 | 1920 x 1080 | 약 8 fps |
 
 ## TO DO
-~~0. ROS Image topic을 받은 후, Depth 정보를 Image로 Publish~~
-0. 심한 delay 해결하기...
+~~0. ROS Image topic을 받은 후, Depth 정보를 Image로 Publish~~ (20.07.11)   
+0. ROS를 사용하는 경우 심한 delay 발생...
