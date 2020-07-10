@@ -20,14 +20,10 @@ python3 depth_video.py --model_name mono+stereo_640x192 --width 1080 --height 72
 
 --width, --height 뒤의 값을 바꿔주면 해당 사이즈로 resize 된다.
 
-속도는 아래와 같다.
-
 
 
 ## Execution Result
 <p align="center"><img src="https://user-images.githubusercontent.com/59161083/87166967-45b68b80-c307-11ea-9b86-ece82858d94d.gif" width="150%" height="150%"></img></p>
-
-결과는 아래와 같다.
 
 | resolution | fps |
 |:--------:|:--------:|
