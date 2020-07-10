@@ -10,6 +10,8 @@ CUDA: 10.0
 cudnn: 7.6.5   
 
 ## Usage
+<p align="center"><img src="![ezgif com-optimize](https://user-images.githubusercontent.com/59161083/87166967-45b68b80-c307-11ea-9b86-ece82858d94d.gif)
+" width="150%" height="150%"></img></p>
 
 ## Execution Result
 
