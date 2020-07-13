@@ -34,7 +34,11 @@ BboxSubscriber 노드는 yolov3_pytorch_ros 패키지에서 publish한 BoundingB
 ImgPreprocessing 노드는 yolov3_pytorch_ros 패키지에서 publish한 Image 메세지와 BoundingBoxes 메세지를 이용하여 시각화하는 역할을 한다. opencv를 이용하여 물체가 인식된 영역에 해당 class에 해당하는 색으로 사각형을 그린 후, 해당 객체의 class와 현재 위치(left, center, right)를 텍스트로 표시하게 된다.
 
 ### node graph
-아래의 node graph는 usb_cam를 이용하여 yolo를 실행하고 있는 상황을 보여준다. 
-
+#### version1
 <p align="center"><img src="https://user-images.githubusercontent.com/59161083/86787084-b0658e00-c09f-11ea-9872-0b4174d05446.png" width="100%" height="100%"></img></p>
+
+#### version2
+<p align="center"><img src="
+https://user-images.githubusercontent.com/59161083/87340756-7b67a880-c583-11ea-8f1c-fcfce286357b.png" width="100%" height="100%"></img></p>
+
 
