@@ -60,4 +60,4 @@ usb_cam을 통해 받은 이미지를, monodepth2로 depth map을 얻기 위해,
 
 ## TO DO
 0. ~~ROS Image topic을 받은 후, Depth 정보를 Image로 Publish~~ (20.07.11)   
-1. ~~ROS를 사용하는 경우 심한 delay 발생...~~
+1. ~~ROS를 사용하는 경우 심한 delay 발생...~~ (20.07.13)
