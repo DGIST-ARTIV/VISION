@@ -42,6 +42,13 @@ python ROS_monodepth.py --model_name [mono+stereo_640x192] --width [width] --hei
 | 1080 x 720 | 약 23 fps |
 | 1920 x 1080 | 약 8 fps |
 
+## Improvement
+#### 기존의 ROS node graph
+기존에 사용한 방식의 ros node graph는 아래와 같다. 
+<p align="center"><img src="https://user-images.githubusercontent.com/59161083/87302332-2b212400-c54c-11ea-8854-dafc1eab6cf6.png" width="150%" height="150%"></img></p>
+
+
+
 ## TO DO
 0. ~~ROS Image topic을 받은 후, Depth 정보를 Image로 Publish~~ (20.07.11)   
-1. ROS를 사용하는 경우 심한 delay 발생...
+1. ~~ROS를 사용하는 경우 심한 delay 발생...~~
