@@ -1,5 +1,6 @@
 import rospy
 import message_filters
+from message_filters import ApproximateTimeSynchronizer, Subscriber
 import cv2
 import numpy as np
 import os
@@ -59,6 +60,7 @@ def parse_args():
     return parser.parse_args()
 
 def callback(data, msg):
+    print("fuck")
     global FinalDepthMap
     global args
     global feed_width
@@ -98,9 +100,14 @@ def callback(data, msg):
 
         # Saving colormapped depth image
         disp_resized_np = disp_resized.squeeze().cpu().numpy()
+        print("disp_resized_np", disp_resized_np.max())
         vmax = np.percentile(disp_resized_np, 90)
+        print("vmax", vmax)
+        print("==========================================================================")
+
         normalizer = mpl.colors.Normalize(vmin=disp_resized_np.min(), vmax=vmax)
-        mapper = cm.ScalarMappable(norm=normalizer, cmap='magma')
+        #mapper = cm.ScalarMappable(norm=normalizer, cmap='magma')
+        mapper = cm.ScalarMappable(norm=None, cmap='magma')
         colormapped_im = (mapper.to_rgba(disp_resized_np)[:, :, :3] * 255).astype(np.uint8)
         im = pil.fromarray(colormapped_im)
         open_cv_image = np.array(im)
@@ -199,7 +206,7 @@ def callback(data, msg):
         crop = cv2.cvtColor(FinalDepthMap, cv2.COLOR_BGR2GRAY)
         crop = FinalDepthMap[xmin:xmax, ymin:ymax]
         crop = np.array(crop)
-        distance = str(crop.mean())
+        distance = str(round(crop.mean(),2))
         cv2.rectangle(imgforBbox, (int(xmin)-5, int(ymin)-65), (int(xmax)+5, int(ymin)), (255,255,255),-1)
         cv2.rectangle(imgforBbox, (int(xmin), int(ymin)), (int(xmax), int(ymax)), (color[0],color[1],color[2]),2)
         #print(color)
@@ -266,7 +273,7 @@ def main():
     bbox = message_filters.Subscriber("/yolov3/bbox", BoundingBoxes)
     image_raw = message_filters.Subscriber("/yolov3/image_raw", Image)
     #DepthMap = rospy.Subscriber("/yolov3/image_raw", Image, Depthcallback)
-    ts = message_filters.ApproximateTimeSynchronizer([bbox, image_raw], 10, 100)
+    ts = message_filters.ApproximateTimeSynchronizer([bbox, image_raw], 10, 10)
     ts.registerCallback(callback)
     rospy.spin()
 
