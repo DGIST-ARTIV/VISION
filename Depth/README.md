@@ -59,7 +59,7 @@ usb_cam을 통해 받은 이미지를, monodepth2로 depth map을 얻기 위해,
 
 <p align="center"><img src="https://user-images.githubusercontent.com/59161083/87302562-8eab5180-c54c-11ea-9f3b-ee6c451d616e.png" width="150%" height="150%"></img></p>
 
-새롭게 수정된 방식에서는, ```/usb_cam```에서 ```/detector_manager```로 */usb_cam/image_raw* topic을 **한번**, ```/detector_manager```에서 ```/PostProcessing```으로 */yolov3/image_raw* topic을 **한번** publish 한 후, 한 노드 안에서 detect 결과의 시각화와 depth map   
+새롭게 수정된 방식에서는, ```/usb_cam```에서 ```/detector_manager```로 */usb_cam/image_raw* topic을 **한번**, ```/detector_manager```에서 ```/PostProcessing```으로 */yolov3/image_raw* topic을 **한번** publish 한 후, 한 노드 안에서 detect 결과의 시각화와 depth map 
 
 ## TO DO
 0. ~~ROS Image topic을 받은 후, Depth 정보를 Image로 Publish~~ (20.07.11)   
