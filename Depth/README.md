@@ -1,4 +1,4 @@
-# Get Real-time Depth Map from a Camera
+# Get Real-time Depth Map from a Camera and Application to ROS
 Author : 이  구 <br/>
  > reference: https://github.com/nianticlabs/monodepth2
  
