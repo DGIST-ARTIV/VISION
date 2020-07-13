@@ -45,12 +45,17 @@ python ROS_monodepth.py --model_name [mono+stereo_640x192] --width [width] --hei
 ## Improvement
 #### 기존의 ROS node graph
 기존에 사용한 방식의 ros node graph는 아래와 같다. 
-<p align="center"><img src="https://user-images.githubusercontent.com/59161083/87302332-2b212400-c54c-11ea-8854-dafc1eab6cf6.png" width="150%" height="150%"></img></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/59161083/87303410-18a7ea00-c54e-11ea-9a1d-4802df70a766.png" width="150%" height="150%"></img></p>
 
-기존의 방식에서 이미지 토픽을 몇 번 Publish 하게되는지 확인해보자.    
-/usb_cam에서 /detector_manager로 /usb_cam/image_raw topic을 한번, /detector_manager에서 /DetectedImg로 yolov3/image_raw topic을 한번, 마지막으로 /DetectedImg에서 /YOLO_RESULT topic을 publish 하게 된다. 여기에,  
+기존의 방식에서 이미지 토픽을 몇 번 Publish 하게되는지 확인해보자.     
+usb 카메라를 통해 받은 이미지를 이용하여, yolo v3로 객체를 인식할때까지 Image topic을 총 3번 publish 하게 된다.
+/usb_cam에서 /detector_manager로 /usb_cam/image_raw topic을 한번, /detector_manager에서 /DetectedImg로 yolov3/image_raw topic을 한번, 마지막으로 /DetectedImg에서 /YOLO_RESULT topic을 publish 하게 된다. 
 
-수정한 방식은 아래와 같다. 
+usb_cam을 통해 받은 이미지를, monodepth2로 depth map을 얻기 위해,/usb_cam/image_raw에서 /DepthMap으로 Image topic을 한번 더 받아오게 된다. 아직 구현하지는 못했지만, 이미지의 최종 정보에 DepthMap을 사용하여 추정한 거리 정보를 포함시킬 것이기 때문에, 최소 한번 이상의 추가적인 publish가 필요할 것이다.
+
+이 점을 고려하면, 이미지 한 장이 노드 사이를 5번 이상 이동하게 되는 것이다. 이때, 동시에 처리하는 데이터의 양이 늘어날수록(bandwidth가 높아질수록), ROS 자체의 delay가 심해진다.  
+이로인해, 전체적인 시스템을 수정하게 되었다. 수정한 방식은 아래와 같다.  
+
 <p align="center"><img src="https://user-images.githubusercontent.com/59161083/87302562-8eab5180-c54c-11ea-9f3b-ee6c451d616e.png" width="150%" height="150%"></img></p>
 
 
