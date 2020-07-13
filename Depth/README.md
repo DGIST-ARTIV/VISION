@@ -64,4 +64,6 @@ usb_cam을 통해 받은 이미지를, monodepth2로 depth map을 얻기 위해,
 ## TO DO
 0. ~~ROS Image topic을 받은 후, Depth 정보를 Image로 Publish~~ (20.07.11)   
 0. ~~ROS를 사용하는 경우 심한 delay 발생...~~ (20.07.13)
-0. DepthMap과 Bbox를 이용하여 인식된 객체의 거리 추정하기
+0. ~~DepthMap과 Bbox를 이용하여 인식된 객체의 거리 추정하기~~ (20.07.14)
+0. ~~DepthMap estimation 결과를 출력하는 과정에서 normalization 없애기~~ (20.07.14)
+0. 인식된 객체의 실제 위치와 DepthMap의 Bbox pixel값 평균 비교하기
