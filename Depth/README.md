@@ -53,7 +53,9 @@ python ROS_monodepth.py --model_name [mono+stereo_640x192] --width [width] --hei
 usb_cam을 통해 받은 이미지를, monodepth2로 depth map을 얻기 위해,```/usb_cam/image_raw```에서 ```/DepthMap```으로 Image topic을 한번 더 받아오게 된다. 아직 구현하지는 못했지만, 이미지의 최종 정보에 DepthMap을 사용하여 추정한 거리 정보를 포함시킬 것이기 때문에, 최소 한번 이상의 추가적인 publish가 필요할 것이다.
 
 이 점을 고려하면, **이미지 한 장**이 노드 사이를 **5번 이상** 이동하게 되는 것이다. 이때, 동시에 처리하는 데이터의 양이 늘어날수록(bandwidth가 높아질수록), ROS 자체의 delay가 심해진다.  
-이로인해, 전체적인 시스템을 수정하게 되었다. 수정한 방식은 아래와 같다.  
+이로인해, 전체적인 시스템을 수정하게 되었다.
+
+#### 수정된 ROS node graph
 
 <p align="center"><img src="https://user-images.githubusercontent.com/59161083/87302562-8eab5180-c54c-11ea-9f3b-ee6c451d616e.png" width="150%" height="150%"></img></p>
 
