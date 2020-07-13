@@ -1,2 +1,2 @@
 # VISION
-**ASCL 랩장: 
+**ASCL 랩장: 이 구**
