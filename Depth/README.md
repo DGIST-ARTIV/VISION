@@ -47,6 +47,11 @@ python ROS_monodepth.py --model_name [mono+stereo_640x192] --width [width] --hei
 기존에 사용한 방식의 ros node graph는 아래와 같다. 
 <p align="center"><img src="https://user-images.githubusercontent.com/59161083/87302332-2b212400-c54c-11ea-8854-dafc1eab6cf6.png" width="150%" height="150%"></img></p>
 
+기존의 방식에서 이미지 토픽을 몇 번 Publish 하게되는지 확인해보자.    
+/usb_cam에서 /detector_manager로 /usb_cam/image_raw topic을 한번, /detector_manager에서 /DetectedImg로 yolov3/image_raw topic을 한번, 마지막으로 /DetectedImg에서 /YOLO_RESULT topic을 publish 하게 된다. 여기에,  
+
+수정한 방식은 아래와 같다. 
+<p align="center"><img src="https://user-images.githubusercontent.com/59161083/87302562-8eab5180-c54c-11ea-9f3b-ee6c451d616e.png" width="150%" height="150%"></img></p>
 
 
 ## TO DO
