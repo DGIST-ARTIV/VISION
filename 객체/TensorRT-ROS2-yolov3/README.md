@@ -1,6 +1,6 @@
 # How to use TensorRT-yolov3 with ROS2
 Author: 이  구
-date: 2020.07.22
+date: 2020.07.21
 
 ### TensorRT yolov3
 > reference: https://github.com/jkjung-avt/tensorrt_demos
@@ -24,4 +24,5 @@ ROS의 Image 타입 message를 받은 후, trt-yolov3로 object들을 detect한 
 
 
 ### To Do
-0. 약 60 fps였던 trt-yolov3가 ROS2에 적용하면 20 fps로 실행됨 
+0. ~~약 60 fps였던 trt-yolov3가 ROS2에 적용하면 20 fps로 실행됨 ~~(2020.07.22)
+
