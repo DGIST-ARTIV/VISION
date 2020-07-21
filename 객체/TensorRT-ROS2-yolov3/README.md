@@ -3,9 +3,8 @@ Author: 이  구
 date: 2020.07.21
 
 ### TensorRT yolov3
-> reference: https://github.com/jkjung-avt/tensorrt_demos
-yolov3.weights -> yolov3.onnx -> yolov3.trt 로 변환해야 한다. 그 과정은 위의 링크를 참고.
-
+> reference: https://github.com/jkjung-avt/tensorrt_demos   
+yolov3.weights -> yolov3.onnx -> yolov3.trt 로 변환해야 한다. 그 과정은 위의 링크를 참고.   
 
 ### TensorRT yolov3 with ROS2
 TensorRT-ROS2-yolov3 안의 파일들을 다운 받은 후, catkin_ws/src 로 옮긴다. catkin_make 후 사용하면 된다.
