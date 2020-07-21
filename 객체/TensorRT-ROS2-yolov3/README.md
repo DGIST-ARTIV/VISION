@@ -28,7 +28,8 @@ ROS의 Image 타입 message를 받은 후, trt-yolov3로 object들을 detect한 
 성능이 말도안되게 떨어지는 것이 이해할 수 없어, 각 과정에서 소요되는 시간을 측정해보았다.   
 callback 함수의 기능을 분리해서 살펴보면, 아래와 같다.
     1. ROS2 Image type의 message를 cv2 image 형식으로 변환 (cv_bridge 사용)
-    2. cv2 형식의 이미지를 통해 trt-yolov3 detect 실행
-    3. 실행 결과를 
+    2. cv2 형식의 이미지를 통해 trt-yolov3 detect 실행 -> bbox 얻음.
+    3. BoundingBoxes 타입의 메세지로 해당 이미지에 존재하는 객체들의 Bbox 정보를 mapping 및 publish.
+    4. Bbox 정보들을 이미지에 시각화한 후, 해당 이미지를 ROS2 Image type으로 변환하여 publish.
 
 
