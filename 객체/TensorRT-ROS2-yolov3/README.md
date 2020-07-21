@@ -11,7 +11,7 @@ yolov3.weights -> yolov3.onnx -> yolov3.trt 로 변환해야 한다. 그 과정�
 TensorRT-ROS2-yolov3 안의 파일들을 다운 받은 후, catkin_ws/src 로 옮긴다. catkin_make 후 사용하면 된다.
 
 #### trt_yolov3_node
-ROS의 Image 타입 message를 받은 후, trt-yolov3로 object들을 detect한 후, 그 이미지를 Image 타입의 메세지로, 인식된 물체들을 BoundingBoxes 메세지 타입으로 publish한다. 이때, BoundingBoxes는 custom message로, BoundingBox의 array이다. BoundingBox 역시 custom message로, 아래와 같이 구성되어 있다.   
+ROS의 Image 타입 message를 받은 후, trt-yolov3로 object들을 detect한 후, 그 이미지를 Image 타입의 메세지(/TRT_yolov3/image_result)로, 인식된 물체들을 BoundingBoxes 타입의 메세지(/TRT_yolov3/Bbox)로 publish한다. 이때, BoundingBoxes는 custom message로, BoundingBox의 array이다. BoundingBox 역시 custom message로, 아래와 같이 구성되어 있다.   
 
     string Class
     float64 probability
@@ -24,5 +24,11 @@ ROS의 Image 타입 message를 받은 후, trt-yolov3로 object들을 detect한 
 
 
 ### To Do
-0. ~~약 60 fps였던 trt-yolov3가 ROS2에 적용하면 20 fps로 실행됨~~(2020.07.22)
+0. ~~약 60 fps였던 trt-yolov3가 ROS2에 적용하면 20 fps로 실행됨~~ (2020.07.22)
+성능이 말도안되게 떨어지는 것이 이해할 수 없어, 각 과정에서 소요되는 시간을 측정해보았다.   
+callback 함수의 기능을 분리해서 살펴보면, 아래와 같다.
+    1. ROS2 Image type의 message를 cv2 image 형식으로 변환 (cv_bridge 사용)
+    2. cv2 형식의 이미지를 통해 trt-yolov3 detect 실행
+    3. 실행 결과를 
+
 
