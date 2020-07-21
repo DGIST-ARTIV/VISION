@@ -43,9 +43,7 @@ ImgPreprocessing 노드는 yolov3_pytorch_ros 패키지에서 publish한 Image �
 #### version2
 <p align="center"><img src="https://user-images.githubusercontent.com/59161083/87340756-7b67a880-c583-11ea-8f1c-fcfce286357b.png" width="100%" height="100%"></img></p>
 
-기존의 
-
-[여기](https://github.com/DGIST-ARTIV/VISION/blob/master/%EA%B0%9D%EC%B2%B4/yolov3_pytorch%2BROS/src/yolov3_pytorch_ros/src/detector.py)
+이후, 위와 같은 구조로 변경하였다. monodepth2를 이용하는 depthmap estimation이 추가되었다. 자세한 과정은 [여기](https://github.com/DGIST-ARTIV/VISION/blob/master/Depth/README.md)
 
 
 
