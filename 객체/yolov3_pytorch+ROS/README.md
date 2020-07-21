@@ -39,10 +39,14 @@ ImgPreprocessing 노드는 yolov3_pytorch_ros 패키지에서 publish한 Image �
 
 위의 DetectedImg는 Bbox와 image_raw topic을 동시에 받은 후, callback을 실행한다. 이를 구현하기 위해 ApproximateTimeSynchronizer를 사용하였다. 자세한 내용은 [여기](https://github.com/DGIST-ARTIV/VISION/blob/master/%EA%B0%9D%EC%B2%B4/yolov3_pytorch+ROS/src/YOLO/src/ImgPostprocessing.py)를 참고.
 
- 
-[여기](https://github.com/DGIST-ARTIV/VISION/blob/master/%EA%B0%9D%EC%B2%B4/yolov3_pytorch%2BROS/src/yolov3_pytorch_ros/src/detector.py)
 
 #### version2
 <p align="center"><img src="https://user-images.githubusercontent.com/59161083/87340756-7b67a880-c583-11ea-8f1c-fcfce286357b.png" width="100%" height="100%"></img></p>
+
+기존의 
+
+[여기](https://github.com/DGIST-ARTIV/VISION/blob/master/%EA%B0%9D%EC%B2%B4/yolov3_pytorch%2BROS/src/yolov3_pytorch_ros/src/detector.py)
+
+
 
 
