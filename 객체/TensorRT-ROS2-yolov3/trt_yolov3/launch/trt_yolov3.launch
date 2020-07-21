@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="trt_yolov3" pkg="trt_yolov3" type="trt_yolov3_node.py" output="screen">
+  </node>
+
+</launch>
