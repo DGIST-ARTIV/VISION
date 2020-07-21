@@ -55,6 +55,7 @@ import cv2
 import tensorrt as trt
 import pycuda.driver as cuda
 import os
+import getpass
 
 def _preprocess_yolov3(img, shape):
     """Preprocess an image before TRT YOLOv3 inferencing."""
@@ -391,7 +392,7 @@ class TrtYOLOv3(object):
     """TrtYOLOv3 class encapsulates things needed to run TRT YOLOv3."""
 
     def _load_engine(self):
-        TRTbin = "install/trt_yolov3/lib/trt_yolov3/%s.trt" % self.model
+        TRTbin = "/home/%s/colcon_ws/install/trt_yolov3/lib/trt_yolov3/%s.trt" %(getpass.getuser(), self.model)
         print(os.path.isfile(TRTbin))
 
         with open(TRTbin, 'rb') as f, trt.Runtime(self.trt_logger) as runtime:
