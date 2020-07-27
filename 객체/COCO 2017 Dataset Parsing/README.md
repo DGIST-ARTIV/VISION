@@ -3,7 +3,7 @@ Author: 이  구
 date: 2020.07.27
 
 ### How to use
-* cocotoyoloconverter.py
+* cocotoyoloconverter.py   
  
 코드 내의 
 ```(python3)
@@ -15,17 +15,18 @@ cat = {class name}
 ```(python3)
 mystring = str("1 " + str(truncate(x, 7)) + " " + str(truncate(y, 7)) + " " + str(truncate(w, 7)) + " " + str(truncate(h, 7)))
 ```
-1을 수정하여 class num을 바꿔줄 수 있다.
+1을 수정하여 class num을 바꿔줄 수 있다.   
 
-* compare.py
+* compare.py   
 cocotoyoloconverter.py를 실행하면 해당하는 class의 txt 파일만 생성된다. compare.py는 이 텍스트 파일에 대응되는 이미지 파일을 저장하는 코드이다.
 
-* listing.py
-해당 폴더 내에 있는 jpg 형식 파일의 리스트를 만들어준다. 
+* listing.py   
+해당 폴더 내에 있는 jpg 형식 파일의 리스트를 만들어준다.    
 
-* result_listing.py
-listing 된 txt 파일들을 다시 한번 합쳐준다. yolov3 학습 시 train.txt에 해당하는 파일을 생성해준다.   
+* result_listing.py     
+listing 된 txt 파일들을 다시 한번 합쳐준다. yolov3 학습 시 train.txt에 해당하는 파일을 생성해준다.      
 
-* convert_class_num_for_multi_object.py
+* convert_class_num_for_multi_object.py   
+폴더별로 데이터를 정리해 놓은 경우, 
 
 
