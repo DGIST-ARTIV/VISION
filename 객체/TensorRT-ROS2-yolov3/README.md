@@ -31,6 +31,7 @@ callback 함수의 기능을 분리해서 살펴보면, 아래와 같다.
     3. BoundingBoxes 타입의 메세지로 해당 이미지에 존재하는 객체들의 Bbox 정보를 mapping 및 publish.
     4. Bbox 정보들을 이미지에 시각화한 후, 해당 이미지를 ROS2 Image type으로 변환하여 publish
     
- 적폐는 4번. cv2 형식의 이미지를 ROS Image 타입으로 바꾸는 과정에서 약 0.03초가 소요된다. 이미지 대신 bbox만 publish 하기로 결정.    
+    적폐는 4번. cv2 형식의 이미지를 ROS Image 타입으로 바꾸는 과정에서 약 0.03초가 소요된다. 이미지 대신 bbox만 publish 하기로 결정.    
 
+1. 
 
