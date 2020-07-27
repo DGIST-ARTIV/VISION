@@ -27,6 +27,6 @@ cocotoyoloconverter.py를 실행하면 해당하는 class의 txt 파일만 생�
 listing 된 txt 파일들을 다시 한번 합쳐준다. yolov3 학습 시 train.txt에 해당하는 파일을 생성해준다.      
 
 * convert_class_num_for_multi_object.py   
-폴더별로 데이터를 정리해 놓은 경우, 
+폴더별로 데이터를 정리해 놓은 경우, 해당 폴더 안에 있는 이미지의 모든 객체의 클래스 넘버를 바꿔준다.
 
 
