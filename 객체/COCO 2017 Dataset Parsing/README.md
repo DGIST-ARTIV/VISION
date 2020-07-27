@@ -5,14 +5,12 @@ date: 2020.07.27
 ### How to use
 * cocotoyoloconverter.py   
  
-코드 내의 
-```(python3)
+코드 내의 ```(python3)
 cat = {class name}
 ```
 을 수정하여 추출할 class를 선택할 수 있다. 오직 하나의 class만 추출할 수 있다.
 
-코드 내의 
-```(python3)
+코드 내의 ```(python3)
 mystring = str("1 " + str(truncate(x, 7)) + " " + str(truncate(y, 7)) + " " + str(truncate(w, 7)) + " " + str(truncate(h, 7)))
 ```
 1을 수정하여 class num을 바꿔줄 수 있다.   
