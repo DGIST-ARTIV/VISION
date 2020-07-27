@@ -34,7 +34,7 @@ callback 함수의 기능을 분리해서 살펴보면, 아래와 같다.
     적폐는 4번. cv2 형식의 이미지를 ROS Image 타입으로 바꾸는 과정에서 약 0.03초가 소요된다. 이미지 대신 bbox만 publish 하기로 결정.    
 
 0. ~~launch 파일 만들기~~   
-0. custom object 학습 및 확인   
+0. ~~custom object 학습 및 확인~~ (2020.07.24)   
 <p align="center"><img src="https://user-images.githubusercontent.com/59161083/88577129-73c6fa00-d081-11ea-8b19-3cc44c97e6e4.jpg" width="50%" height="50%"></img></p>
-위의 사진은 사람만 학습시킨 후, 테스트 한 결과이다. 약 130 fps.
+    위의 사진은 사람만 학습시킨 후, 테스트 한 결과이다. 약 130 fps.
 
