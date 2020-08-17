@@ -34,6 +34,7 @@ https://gist.github.com/andyweizhao/639e94b60c166f57964aafedeb465e90
 ## Install Cudnn
 1. GOTO [Link](https://developer.nvidia.com/rdp/cudnn-download), and download cuDNN Runtime Library for Ubuntu18.04 (Deb)
 2. Execute the file!
+[reference](https://pythonkim.tistory.com/71)
 ~~~ bash
 sudo dpkg -i libcudnn7_7.6.4.38-1+cuda10.0_amd64.deb 
 ~~~
