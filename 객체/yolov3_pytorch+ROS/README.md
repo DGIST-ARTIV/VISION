@@ -1,6 +1,6 @@
 # How to use yolov3 with ROS
-Author: 이  구
-date: 2020.07.07
+Author: 이  구   
+date: 2020.07.07   
 
 ## 사용법
 build는 무시하고, src의 파일들을 다운 받은 후, 자신의 catkin_ws/src 로 옮긴다. catkin_make 후 사용하면 된다.
