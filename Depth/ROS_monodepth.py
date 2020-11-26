@@ -134,5 +134,5 @@ if __name__ == '__main__':
     depth_decoder.to(device)
     depth_decoder.eval()
     rospy.init_node('DepthMap', anonymous=True)
-    rospy.Subscriber('/image', Image, callback)
+    rospy.Subscriber('/image', Image, callback, queue_size=1)
     rospy.spin()
